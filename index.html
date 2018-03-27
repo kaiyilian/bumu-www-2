@@ -1,0 +1,1142 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta name="baidu-site-verification" content="LPungTQSHQ"/>
+    <meta name='renderer' content='webkit'>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+
+    <title>招才进宝-HR智能服务与员工生活大数据平台</title>
+    <link rel="icon" href="image/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon"/>
+
+    <!--jquery 引用-->
+    <script src="js/jquery/jquery-2.1.1.min.js"></script>
+    <!--bootstrap样式-->
+    <link href="css/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="js/plugins/bootstrap/bootstrap.min.js"></script>
+    <script src="js/plugins/bootstrap/bootstrap-dropdown-hover.js"></script>
+    <!--轮播图-->
+    <!--弹框-->
+    <link href="css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <script src="js/plugins/toastr/toastr.min.js"></script>
+    <!--公共-->
+    <link href="css/common.css" rel="stylesheet">
+    <link href="css/bumu/operate.css" rel="stylesheet">
+    <link href="css/bumu/header.css" rel="stylesheet">
+    <link href="css/bumu/footer.css" rel="stylesheet">
+    <script src="js/common.js"></script>
+    <script src="js/bumu/bumu.js"></script>
+    <script src="js/bumu/operate.js"></script>
+    <script src="js/bumu/header.js"></script>
+    <script src="js/bumu/footer.js"></script>
+    <script src="js/bumu/html5media.min.js"></script>
+
+    <!--本页面样式-->
+    <link href="css/pages/index.css" rel="stylesheet">
+    <script src="js/pages/index.js"></script>
+
+    <!--[if (gte IE 10)|(!IE)]> -->
+    <link href="js/plugins/Swiper-3.1.0/dist/css/swiper.min.css" rel="stylesheet">
+    <script src="js/plugins/Swiper-3.1.0/dist/js/swiper.min.js"></script>
+    <!-- <![endif]-->
+    <!--[if (lte IE 9)]>
+    <link href="js/plugins/Swiper-2.7.6/dist/idangerous.swiper.css" rel="stylesheet">
+    <script src="js/plugins/Swiper-2.7.6/dist/idangerous.swiper.js"></script>
+
+    <style>
+        .swiper-pagination {
+            position: absolute;
+            z-index: 20;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .swiper-slide {
+            cursor: default;
+        }
+
+        .swiper-pagination-switch {
+            display: inline-block;
+            width: 8px;
+            height: 8px;
+            border-radius: 8px;
+            background: #555;
+            margin: 0 5px;
+            opacity: 0.8;
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+
+        .swiper-active-switch {
+            background: #fff;
+        }
+
+    </style>
+    <![endif]-->
+
+    <!--[if (lte IE 11)]>
+    <style>
+        video#bm_video {
+            display: block;
+            margin: 100px auto;
+        }
+    </style>
+    <![endif]-->
+
+
+</head>
+<body>
+
+<header>
+
+    <div class="row line">
+
+        <div class="col-xs-3">您好，欢迎光临不木官网！</div>
+
+        <div class="col-xs-3 pull-right" style="padding:0;">
+
+            <div class="col-xs-8" style="display: flex;padding:0;">
+
+                <div class="icon_salary" style="">
+                    <img src="image/header/icon_salary.png" style="display: block;">
+                </div>
+
+                <a class="micro-blog" style="cursor: pointer;" target="_blank" onclick="header.goSalaryPage()">
+                    电子工资单加强版
+                </a>
+
+            </div>
+
+            <!--<span class="txt" onclick="header.goKeySass()">K-Saas平台</span>-->
+            <span class="btn btn-sm btn-primary pull-right" onclick="header.goTrailApply()">申请试用</span>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="cpy_info col-xs-3" onclick="header.goIndex()">
+            <img class="cpy_logo" src="image/logo.png"/>
+            <span class="cpy_name">招才进宝</span>
+        </div>
+
+        <div class="navbar_container col-xs-9">
+
+            <div class="col-xs-2 navbar-btn index active" data-type="index">
+                首页
+            </div>
+
+            <div class="col-xs-2 navbar-btn dropdown product_service" data-type="product"
+                 data-submenu="true" data-page="pages/product_service/product_service.html">
+
+                <div class="dropdown-toggle"
+                     data-toggle="dropdown" data-hover="dropdown"
+                     aria-haspopup="true" aria-expanded="true">
+                    产品服务
+                </div>
+                <ul class="dropdown-menu">
+
+                    <li class="dropdown-submenu">
+                        <a>人事服务</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="rsfw?s=social_insurance_container">人事代理</a></li>
+                            <li><a data-anchor="rsfw?s=entry_container">人事派遣</a></li>
+                            <li><a data-anchor="rsfw?s=com_insurance_container">人事平台</a></li>
+                            <li><a data-anchor="rsfw?s=entry_container">薪酬代发</a></li>
+                            <li><a data-anchor="rsfw?s=entry_container">证件办理</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                        <a>灵活用工</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="lhyg">ITO</a></li>
+                            <li><a data-anchor="lhyg">服务流程外包</a></li>
+                            <li><a data-anchor="lhyg">岗位外包</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                        <a>综合福利</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="zhfl">雇主责任险</a></li>
+                            <li><a data-anchor="zhfl">补充医疗保险</a></li>
+                            <li><a data-anchor="zhfl">高端医疗险</a></li>
+                            <li><a data-anchor="zhfl">弹性福利</a></li>
+                            <li><a data-anchor="zhfl">薪酬优化</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+
+                        <!--<a data-toggle="dropdown" data-hover="dropdown"-->
+                        <!--data-close-others="false"-->
+                        <!--aria-haspopup="true" aria-expanded="true">-->
+                        <!--猎头RPO-->
+                        <!--</a>-->
+
+                        <a>猎头RPO</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="ltRPO">高级人才搜索</a></li>
+                            <li><a data-anchor="ltRPO">背景调查</a></li>
+                            <li><a data-anchor="ltRPO">RPO</a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col-xs-2 navbar-btn news_center" data-type="news_center">
+                新闻中心
+            </div>
+
+            <div class="col-xs-2 navbar-btn dropdown join_us" data-type="join_us"
+                 data-submenu="true">
+
+                <div class="dropdown-toggle"
+                     data-toggle="dropdown" data-hover="dropdown"
+                     aria-haspopup="true" aria-expanded="true">
+                    加入不木
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a data-page="pages/join_us/bm_style.html">不木风采</a></li>
+                    <li><a data-page="pages/join_us/join_us.html">岗位需求</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-xs-2 navbar-btn contact_us" data-type="contact_us">
+                联系我们
+            </div>
+
+            <div class="col-xs-2 cpy_phone">
+                <span>400-671-0710</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<div class="content">
+
+    <div class=" block_1 banner_list">
+
+        <div class="swiper-container banner_container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <img src="image/index/img_banner_7.png" onclick="index.showMedia()"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="image/index/img_banner_1.png"
+                         onclick="index.goPageBySwiper('pages/product_service/product_service.html#zhfl')"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="image/index/img_banner_2.png"
+                         onclick="index.goPageBySwiper('pages/product_service/product_service.html#rsfw?s=com_insurance_container')"/>
+                </div>
+                <div class="swiper-slide">
+                    <img src="image/index/img_banner_3.png"/>
+                </div>
+            </div>
+            <!-- 如果需要分页器 -->
+            <div class="swiper-pagination"></div>
+            <!-- 如果需要导航按钮 -->
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+        </div>
+
+    </div>
+
+    <div class="block block_7 company_intro_container">
+
+        <div class="">
+
+            <img src="./image/index/company_info.png">
+
+            <div class="company_intro">
+
+                <div class="txt">
+                    <span><b style="font-size: 14px;">招才进宝</b></span>
+                    成立于2015年，总部位于中国苏州，依托母公司汇思集团17年强有力的后台资源及业内资深团队的经验支持，
+                    依托覆盖全国的人力资源服务网络以及自主研发的人事薪酬Saas平台，
+                    全方位为客户提供包括人事服务、灵活用工、综合福利、猎头RPO在内的多项专业人力资源服务，
+                    为不同行业不同客户提供个性化人力资源综合解决方案。
+                </div>
+
+                <div class="txt">
+                    线下直营网点以四大运营中心辐射全国（上海汇倾人力、北京汇嘉人力、成都汇翼人力、深圳汇嘉人力），
+                    直营网点管理以上海为中心，截至2017年底已完成全国19个省70多个城市的网点覆盖，
+                    并将于2018年完成全国30个省市自治区300多个城市的全覆盖，成为全国直营网点覆盖最广的人力资源服务供应商。
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block block_2 choose_us_reason_container">
+
+        <div class="title_container">
+            <div class="title">为什么选择我们？</div>
+        </div>
+
+        <div class="list">
+
+            <div class="item item_1 col-xs-12 col-sm-6 col-md-2">
+                <span class="spn_1">
+                    <span class="count" style="width:79px;text-align: center">30</span>
+                    <span class="unit">省</span>
+                </span>
+                <span class="txt">
+                    全国30个直营省/自治区
+                </span>
+            </div>
+
+            <div class="item item_2 col-xs-12 col-sm-6 col-md-3">
+                <span class="spn_1">
+                    <span class="count" style="width:79px;text-align: center">17</span>
+                    <span class="unit">年</span>
+                </span>
+                <span class="txt">
+                    17年人力资源从业背景
+                </span>
+            </div>
+
+            <div class="item item_3 col-xs-12 col-sm-6 col-md-3">
+                <span class="spn_1">
+                    <span class="count" style="width:158px;text-align: center">3000</span>
+                    <span class="unit">家</span>
+                </span>
+                <span class="txt">
+                    3000用户种子客户群
+                </span>
+            </div>
+
+            <div class="item item_4 col-xs-12 col-sm-6 col-md-4" style="padding:0;">
+                <span class="spn_1">
+                    <span class="count" style="width:210px;text-align: center">
+                        200,000
+                    </span>
+                    <span class="unit">人次</span>
+                </span>
+                <span class="txt">
+                    2017年全年服务用户200,000人次
+                </span>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block block_5 core_competence_container">
+
+        <div class="title_container">
+            <div class="title" style="color:#fff;">我们的核心竞争力</div>
+            <div class="sec_title" style="color:#ccc;">用更真诚的心，为你提供更优质的服务</div>
+        </div>
+
+        <div class="core_competence_img_list row">
+
+            <div class="core_competence_img_item col-xs-3">
+
+                <div class="core_competence_content">
+
+                    <div class="core_competence_img">
+                        <img src="image/index/core_competence_1.png"/>
+                    </div>
+
+                    <div class="txt">
+                        <div class="txt_1">团队</div>
+                        <div class="txt_2">
+                            覆盖全国的服务团队，4年以上同行业服务经验，
+                            高效专业解决存在的问题
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="core_competence_img_item col-xs-3">
+
+                <div class="core_competence_content">
+                    <div class="core_competence_img">
+                        <img src="image/index/core_competence_3.png"/>
+                    </div>
+
+                    <div class="txt">
+                        <div class="txt_1">产品</div>
+                        <div class="txt_2">
+                            整合多样化HR服务<br>
+                            控制风险，优化成本
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="core_competence_img_item col-xs-3">
+
+                <div class="core_competence_content">
+                    <div class="core_competence_img">
+                        <img src="image/index/core_competence_2.png"/>
+                    </div>
+
+                    <div class="txt">
+                        <div class="txt_1">服务</div>
+                        <div class="txt_2">
+                            提供高品质<br>
+                            高效率的直营服务
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="core_competence_img_item col-xs-3">
+
+                <div class="core_competence_content">
+                    <div class="core_competence_img">
+                        <img src="image/index/core_competence_4.png"/>
+                    </div>
+
+                    <div class="txt">
+                        <div class="txt_1">网络</div>
+                        <div class="txt_2">
+                            <!--直营团队布点30个城市，网点覆盖全国400个城市，-->
+                            <!--确保各项服务超越客户期望-->
+                            全国客服系统只能化管理 直营网点覆盖400+城市
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block block_3 our_service_container" style="display: none;">
+
+        <div class="title_container">
+            <div class="title">我们的服务</div>
+            <div class="sec_title">招才进宝 最专业便捷的人力资源自助管理平台</div>
+        </div>
+
+        <div class="service_name_list">
+            <span class="service_name_item active" data-cotainerName="social_insurance_container">社保大厅</span>
+            <span class="service_name_item" data-cotainerName="entry_container">人事平台</span>
+            <span class="service_name_item" data-cotainerName="com_insurance_container">商业保险</span>
+            <span class="service_name_item" data-cotainerName="salary_container">薪资筹划</span>
+        </div>
+
+        <div class="service_container social_insurance_container" style="display: block;">
+
+            <div class="line_1">全国社保代缴 17年服务团队</div>
+            <div class="line_2">社保的事，交给我来办，让您放心，安心</div>
+
+            <ul>
+                <li>全国400+城市网点覆盖，35家线下直营公司，服务有保障</li>
+                <li>资料云端递交、服务准确率高达99.99%;</li>
+                <li>打破行业底价，服务价格低至29.9元/人/月</li>
+                <li>数据全程加密，信息安全有保障</li>
+                <li>随时随地在线缴社保、查社保，数据全程透明</li>
+            </ul>
+
+            <div class="btn_detail" onclick="index.goPage('social')">
+                查看详情
+            </div>
+
+            <div class="img">
+                <img src="image/index/img_social_insurance.png"/>
+            </div>
+
+        </div>
+
+        <div class="service_container entry_container">
+
+            <div class="line_1">KEY-SaaS人力资源管理系统</div>
+            <div class="line_2">基于人力资源云服务的一键认证和识别管理系统</div>
+
+            <ul>
+                <li>全新”互联网+，HR-“模式，为企业省时省力</li>
+                <li>一键入职，轻松实现无纸化入职流程，方便快捷</li>
+                <li>员工信息资料云储存，查找方便节省空间</li>
+                <li>身份实名制认证，规避用工风险，杜绝隐患公告信息一键发布，落实到每位员工，以防疏漏</li>
+            </ul>
+
+            <div class="btn_detail" onclick="index.goPage('entry')">
+                查看详情
+            </div>
+
+            <div class="img">
+                <img src="image/index/img_entry.png"/>
+            </div>
+
+        </div>
+
+        <div class="service_container com_insurance_container">
+
+            <div class="line_1">我们为您提供全方位保障</div>
+            <div class="line_2">提供多样全面的员工团体健康保障</div>
+
+            <ul>
+                <li> 保障全面，意外、门诊、住院、重疾全覆盖;</li>
+                <li> 八种套餐，固定报价是，为企业节省每一分钱;</li>
+                <li> 在线投保、在线理赔、轻松快捷，简化HR工作;</li>
+            </ul>
+
+            <div class="btn_detail" onclick="index.goPage('commerce')">
+                查看详情
+            </div>
+
+            <div class="img">
+                <img src="image/index/img_com_insurance.png"/>
+            </div>
+
+        </div>
+
+        <div class="service_container salary_container">
+
+            <div class="line_1">我们为您提供全方位保障</div>
+
+            <div class="txtInfo">
+                <span>未知与机遇并存的未来，</span>
+                <span>期待有我们的相伴，</span>
+                <span>为您增添前行的力量！</span>
+            </div>
+
+            <div class="btn_detail" onclick="index.goPage('salary')">查看详情</div>
+
+            <div class="img">
+                <img src="image/index/img_salary.png"/>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block block_4 our_func_container" style="display: none;">
+
+        <div class="title_container">
+            <div class="title">人力资源服务领导者</div>
+            <div class="sec_title">值得信赖的人力资源综合解决方案</div>
+        </div>
+
+        <div class="func_img_list">
+
+            <div class="row">
+
+                <div class="func_img_item col-md-4 ">
+
+                    <div class="func_info bg_1">
+
+                        <div class="img">
+                            <img src="image/index/our_func_1.png"/>
+                        </div>
+
+                        <div class="txt">
+                            <div class="txt_1">身份认证</div>
+                            <div class="txt_2">刷脸认证身份，找工作实名制，杜绝隐性风险</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="func_img_item col-md-4 ">
+
+                    <div class="func_info bg_2">
+
+                        <div class="img">
+                            <img src="image/index/our_func_2.png"/>
+                        </div>
+
+                        <div class="txt">
+                            <div class="txt_1">一键入职</div>
+                            <div class="txt_2">1秒导出入职材料，轻松实现无纸化入职流程</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="func_img_item col-md-4 ">
+
+                    <div class="func_info bg_3">
+
+                        <div class="img">
+                            <img src="image/index/our_func_3.png"/>
+                        </div>
+
+                        <div class="txt">
+                            <div class="txt_1">合同云签</div>
+                            <div class="txt_2">电子签署劳动合同，储存云端，腾出档案侵占</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="row">
+
+                <div class="func_img_item col-md-4 ">
+
+                    <div class="func_info bg_4">
+
+                        <div class="img">
+                            <img src="image/index/our_func_4.png"/>
+                        </div>
+
+                        <div class="txt">
+                            <div class="txt_1">薪资代发</div>
+                            <div class="txt_2">在社保管理板块，帮助用户以最低的成本，达成目标。</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="func_img_item col-md-4 ">
+
+                    <div class="func_info bg_5">
+
+                        <div class="img">
+                            <img src="image/index/our_func_5.png"/>
+                        </div>
+
+                        <div class="txt">
+                            <div class="txt_1">体检报告</div>
+                            <div class="txt_2">员工体检数据直接对接企业，真实可控</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="func_img_item col-md-4 ">
+
+                    <div class="func_info bg_6">
+
+                        <div class="img">
+                            <img src="image/index/our_func_6.png"/>
+                        </div>
+
+                        <div class="txt">
+                            <div class="txt_1">员工培训</div>
+                            <div class="txt_2">提升能力，学习更多知识</div>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block block_6 customer_container" style="display: block;">
+
+        <div class="title_container">
+            <div class="title">我们的客户</div>
+        </div>
+
+        <div class="customer_img_list">
+
+            <div class="left_direction">
+                <img src="image/index/icon_left.png"/>
+            </div>
+
+            <div class="swiper-container customer_img_list_container">
+                <div class="swiper-wrapper">
+
+                    <div class="swiper-slide">
+
+                        <div class="col-xs-3">
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_01.png"/>
+                            </div>
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_02.png"/>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-3">
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_03.png"/>
+                            </div>
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_04.png"/>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-3">
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_05.png"/>
+                            </div>
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_06.png"/>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-3">
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_07.png"/>
+                            </div>
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_08.png"/>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide">
+
+                        <div class="col-xs-3">
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_09.png"/>
+                            </div>
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_10.png"/>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-3">
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_11.png"/>
+                            </div>
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_12.png"/>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-3">
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_13.png"/>
+                            </div>
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_14.png"/>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-3">
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_15.png"/>
+                            </div>
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_16.png"/>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="swiper-slide">
+
+                        <div class="col-xs-3">
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_17.png"/>
+                            </div>
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_18.png"/>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-3">
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_19.png"/>
+                            </div>
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_20.png"/>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-3">
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_21.png"/>
+                            </div>
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_22.png"/>
+                            </div>
+
+                        </div>
+
+                        <div class="col-xs-3">
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_23.png"/>
+                            </div>
+
+                            <div class="img_item">
+                                <img src="image/index/customer/img_customer_24.png"/>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="right_direction">
+                <img src="image/index/icon_right.png"/>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <div class="foot_1">
+
+        <div class="side left_side col-xs-4">
+
+            <div class="line">
+                <span class="btn_nav" data-type="contact_us">联系我们</span>
+                <span class="btn_nav" data-type="join_us">加入不木</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                    <img src="image/icon_footer_location.png"/>
+                </span>
+                <span class="txt">集团总部：苏州工业园区独墅湖高教区东平街266号</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                    <img src="image/icon_footer_phone.png"/>
+                </span>
+                <span class="txt">销售热线：400 -671 -0710</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                     <img src="image/icon_footer_email.png"/>
+                </span>
+                <span class="txt">联系邮箱：support@bumuyun.com</span>
+
+            </div>
+
+        </div>
+
+        <div class="side right_side col-xs-3">
+
+            <span class="item col-xs-6">
+                <span class="qrcode_img">
+                    <img src="image/icon_footer_qrcode_app.png"/>
+                </span>
+
+                <span class="qrcode_name">APP</span>
+            </span>
+
+            <span class="item col-xs-6">
+                <span class="qrcode_img">
+                    <img src="image/icon_footer_qrcode_weixin.png"/>
+                </span>
+
+                <span class="qrcode_name">微信</span>
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="foot_2">
+
+        <div class="copyright">
+            Copyright@2016 - 2018 苏州不木网络科技有限公司 版权归不木所有
+        </div>
+
+        <div class="copyright">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32059002001547">
+                <img src="image/index/icon_beian.png"/>
+                <p>
+                    苏公网安备 32059002001547号 苏ICP备16004093号-1
+                </p>
+            </a>
+        </div>
+
+    </div>
+
+</footer>
+
+<div class="operate_container" style="display: none;">
+
+    <div class="opt_item">
+        <div class="txt txt_email_info">
+            support@bumuyun.com
+        </div>
+        <img src="image/operate/icon_opt_email.png"/>
+    </div>
+
+    <div class="opt_item">
+        <div class="txt txt_phone_info">
+            18762875446（孙经理）
+        </div>
+        <img src="image/operate/icon_opt_phone.png"/>
+    </div>
+
+    <div class="opt_item">
+        <div class="txt txt_qrCode_info">
+            <img src="image/icon_footer_qrcode_app.png"/>
+        </div>
+        <img src="image/operate/icon_opt_qrcode_app.png"/>
+    </div>
+
+    <div class="opt_item" onclick="soin_calc.calcModalShow()">
+        <img src="image/operate/icon_opt_calc.png"/>
+    </div>
+
+    <div class="opt_item" onclick="soin_calc.goTop()">
+        <img src="image/operate/icon_opt_toTop.png"/>
+    </div>
+
+</div>
+
+<div class="modal fade calc_container_modal" style="background-color:rgba(0,0,0,0.50);">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">社保计算器</h4>
+            </div>
+            <div class="modal-body">
+
+                <div class="left_side col-xs-4">
+
+                    <div class="item soin_area_container">
+                        <select class="form-control" onchange="soin_calc.initSoinTypeList()">
+                            <option>参保地</option>
+                            <!--<option>苏州</option>-->
+                            <!--<option>苏州</option>-->
+                        </select>
+                    </div>
+
+                    <div class="item soin_type_container">
+                        <select class="form-control" onchange="soin_calc.SoinTypeInit()">
+                            <option>参保类型</option>
+                            <!--<option>A类</option>-->
+                            <!--<option>B类</option>-->
+                        </select>
+                    </div>
+
+                    <div class="item soin_basic_container">
+                        <input type="text" class="form-control" placeholder="社保基数"
+                               onkeyup="if(isNaN(value))execCommand('undo')" maxlength="10"/>
+                    </div>
+
+                    <div class="item fund_container">
+                        <input type="text" class="form-control" placeholder="公积金基数"
+                               onkeyup="if(isNaN(value))execCommand('undo')" maxlength="10"/>
+                    </div>
+
+                    <div class="line">
+                        <div class="btn" onclick="soin_calc.SoinCalc()">计算</div>
+                        <div class="btn btn-default" onclick="soin_calc.calcReset()">重置</div>
+                    </div>
+
+                </div>
+
+                <div class="right_side col-xs-8">
+
+                    <div class="txt">五险一金缴费明细：</div>
+
+                    <div class="pay_info">
+
+                        <div class="head_info col-xs-12">
+
+                            <div class="col-xs-2">类别</div>
+                            <div class="col-xs-2">基数(元)</div>
+                            <div class="col-xs-4">
+                                <div class="txt">个人缴纳</div>
+                                <div>
+                                    <div class="col-xs-6">缴纳比例(%)</div>
+                                    <div class="col-xs-6">缴纳金额(元)</div>
+                                </div>
+                            </div>
+                            <div class="col-xs-4">
+                                <div class="txt">企业缴纳</div>
+                                <div>
+                                    <div class="col-xs-6">缴纳比例(%)</div>
+                                    <div class="col-xs-6">缴纳金额(元)</div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="content_info col-xs-12">
+
+                            <div class='prompt'>输入左侧数据才能生成明细哦~~</div>
+
+                            <!--<div class="item col-xs-12">-->
+                            <!--<div class="col-xs-2 type_name">养老</div>-->
+                            <!--<div class="col-xs-2 basic_count">2697.00</div>-->
+                            <!--<div class="col-xs-2 per_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 per_pay_amount">218.00</div>-->
+                            <!--<div class="col-xs-2 corp_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 corp_pay_amount">218.00</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="item col-xs-12">-->
+                            <!--<div class="col-xs-2 type_name">医疗</div>-->
+                            <!--<div class="col-xs-2 basic_count">2697.00</div>-->
+                            <!--<div class="col-xs-2 per_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 per_pay_amount">218.00</div>-->
+                            <!--<div class="col-xs-2 corp_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 corp_pay_amount">218.00</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="item col-xs-12">-->
+                            <!--<div class="col-xs-2 type_name">实业</div>-->
+                            <!--<div class="col-xs-2 basic_count">2697.00</div>-->
+                            <!--<div class="col-xs-2 per_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 per_pay_amount">218.00</div>-->
+                            <!--<div class="col-xs-2 corp_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 corp_pay_amount">218.00</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="item col-xs-12">-->
+                            <!--<div class="col-xs-2 type_name">工伤</div>-->
+                            <!--<div class="col-xs-2 basic_count">2697.00</div>-->
+                            <!--<div class="col-xs-2 per_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 per_pay_amount">218.00</div>-->
+                            <!--<div class="col-xs-2 corp_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 corp_pay_amount">218.00</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="item col-xs-12">-->
+                            <!--<div class="col-xs-2 type_name">生育</div>-->
+                            <!--<div class="col-xs-2 basic_count">2697.00</div>-->
+                            <!--<div class="col-xs-2 per_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 per_pay_amount">218.00</div>-->
+                            <!--<div class="col-xs-2 corp_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 corp_pay_amount">218.00</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="item col-xs-12">-->
+                            <!--<div class="col-xs-2 type_name">公积金</div>-->
+                            <!--<div class="col-xs-2 basic_count">2697.00</div>-->
+                            <!--<div class="col-xs-2 per_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 per_pay_amount">218.00</div>-->
+                            <!--<div class="col-xs-2 corp_pay_percentage">8%</div>-->
+                            <!--<div class="col-xs-2 corp_pay_amount">218.00</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="item col-xs-12">-->
+                            <!--<div class="col-xs-2 "></div>-->
+                            <!--<div class="col-xs-2 "></div>-->
+                            <!--<div class="col-xs-4 per_pay_percentage">-->
+                            <!--<span>个人共缴：</span>-->
+                            <!--<span class="count">$500</span>-->
+                            <!--</div>-->
+                            <!--<div class="col-xs-4 per_pay_percentage">-->
+                            <!--<span>企业共缴：</span>-->
+                            <!--<span class="count">$500</span>-->
+                            <!--</div>-->
+                            <!--</div>-->
+
+                            <!--<div class="line col-xs-12">-->
+                            <!--<span class="col-xs-5">-->
+                            <!--<span>总共缴：</span>-->
+                            <!--<span class="count total_count">￥8000</span>-->
+                            <!--</span>-->
+
+                            <!--<span>-->
+                            <!--<span>（其中社保：</span>-->
+                            <!--<span class="count soin_count">￥5000</span>-->
+                            <!--<span>公积金：</span>-->
+                            <!--<span class="count fund_count">￥3000</span>-->
+                            <!--<span>）</span>-->
+                            <!--</span>-->
+                            <!--</div>-->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+            <!--<div class="modal-footer">-->
+            <!--<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>-->
+            <!--<button type="button" class="btn btn-primary">Save changes</button>-->
+            <!--</div>-->
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+</div>
+
+<div class="media_layer">
+
+    <i class="icon_move">
+        <img src="image/index/icon_close.png" onclick="index.hideMedia()">
+    </i>
+
+    <!--<embed src="http://player.youku.com/player.php/sid/XMjg0MjA5NTg4NA==/v.swf"-->
+    <!--allowfullscreen="true" quality="high"-->
+    <!--width="680" height="500" autostart="true"-->
+    <!--align="middle" allowscriptaccess="always"-->
+    <!--type="application/x-shockwave-flash">-->
+
+    <video id="bm_video" src="file/a.mp4" controls="controls">
+        your browser does not support the video tag
+    </video>
+
+
+</div>
+
+<script>
+    document.write(unescape(cnzzStr));
+</script>
+
+
+</body>
+</html>

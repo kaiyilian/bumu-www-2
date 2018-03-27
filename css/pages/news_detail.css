@@ -1,0 +1,7 @@
+.content { background-color: #fff; }
+.content .news_info { padding: 10px 0; width: 1000px; margin: 0 auto; }
+.content .news_info .n_tl_container { line-height: 50px; text-align: center; font-size: 1.6rem; }
+.content .news_info .n_author_container { display: flex; line-height: 30px; font-size: 1.3rem; justify-content: center; }
+.content .news_info .n_content_container { padding: 30px 0; }
+.content .news_info .n_time_container { line-height: 50px; display: flex; justify-content: flex-end; font-size: 1.3rem; color: #666; }
+.content .news_info .none { text-align: center; line-height: 300px; font-size: 3.2rem; }

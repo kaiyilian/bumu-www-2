@@ -1,0 +1,78 @@
+<html>
+<head>
+    <title>招才进宝</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+
+<script src="js/jquery/jquery-2.1.1.min.js"></script>
+
+<!--商机页面短链接-->
+<script language='javascript'>
+
+    $(function () {
+        getUrl();//获取URL参数
+        var $inter = getInterface(); //获取 前缀
+//        console.log($inter);
+
+        var p = sessionStorage.getItem("p");//页面 短参
+        var url;
+
+        switch (p) {
+            case "index":
+                url = "/index.html";
+                break;
+            case "s":
+                url = "/pages/social_insurance/social_insurance.html";
+                break;
+            default:
+                url = "";
+                break;
+        }
+
+        url = $inter + url;
+
+        sessionStorage.clear();
+
+        location.href = url;
+
+    });
+
+
+    //获取 前缀
+    var getInterface = function () {
+
+        var interface = location.protocol + "//" + location.host;//+ "/" + location.pathname.split("/")[1];
+
+        return interface;
+
+    };
+
+    //获取URL参数
+    var  getUrl = function () {
+        var url = location.search;//如果 后缀为#，则不适用，要用 location.href
+        if (url.indexOf("?") > -1) {
+            var params = url.substr(url.indexOf("?") + 1, url.length).split("&");
+
+            for (var i = 0; i < params.length; i++) {
+                var param = params[i].split("=");
+
+                if(!param || param.length < 2) {
+                	console.log('参数错误');
+                	param = params[i].split('%3d');
+                	if (!param || param.length < 2) {
+                		continue;
+					}
+				}
+
+                sessionStorage.setItem(param[0], param[1]);
+
+            }
+        }
+    };
+
+
+</script>
+
+</body>
+</html>

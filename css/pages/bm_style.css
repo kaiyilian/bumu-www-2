@@ -1,0 +1,31 @@
+.content img { position: relative; width: 100%; height: 100%; }
+.content .our_team_container { position: relative; width: 100%; float: left; background-color: #f5f5f5; }
+.content .our_team_container .title_container .title { position: relative; font-size: 3.2rem; margin: 0 auto; width: 200px; line-height: 80px; }
+.content .our_team_container .title_container .title:after { content: ""; position: absolute; width: 100px; bottom: 0; left: 50px; height: 2px; background-color: #f08200; }
+.content .our_team_container .team_list { position: relative; width: 100%; float: left; padding: 0 0 40px; }
+.content .our_team_container .team_list .team_item { position: relative; padding: 0 20px; margin-bottom: 20px; }
+.content .our_team_container .team_list .team_item .item { width: 100%; float: left; border: 1px solid rgba(88, 88, 88, 0.12); -webkit-transition: all linear 0.5s; -moz-transition: all linear 0.5s; -o-transition: all linear 0.5s; transition: all linear 0.5s; }
+.content .our_team_container .team_list .team_item .item > div { float: left; width: 100%; }
+.content .our_team_container .team_list .team_item .item .team_leader_img { position: relative; width: 100%; height: 200px; background-color: #fff; }
+.content .our_team_container .team_list .team_item .item .team_leader_img img { position: relative; width: 120px; height: 120px; display: block; margin: 40px auto; }
+.content .our_team_container .team_list .team_item .item .team_leader_info { position: relative; width: 100%; height: 250px; background-color: #f5f5f5; padding: 10px 15%; }
+.content .our_team_container .team_list .team_item .item .team_leader_info .team_leader_name { position: relative; width: 100%; text-align: center; line-height: 40px; color: #f08200; font-size: 16px; font-weight: bold; }
+.content .our_team_container .team_list .team_item .item .team_leader_info .team_leader_post { position: relative; width: 100%; text-align: center; font-size: 12px; line-height: 20px; color: #000000; }
+.content .our_team_container .team_list .team_item .item .team_leader_info .icon { position: relative; width: 100%; height: 30px; }
+.content .our_team_container .team_list .team_item .item .team_leader_info .icon:before { content: ''; position: absolute; width: 100%; height: 1px; left: 0; top: 14px; background-color: rgba(88, 88, 88, 0.12); }
+.content .our_team_container .team_list .team_item .item .team_leader_info .icon .icon_1 { position: absolute; top: 5px; left: 45%; width: 20px; height: 20px; /*background-color: red;*/ background-color: #f5f5f5; }
+.content .our_team_container .team_list .team_item .item .team_leader_info .icon .icon_1:before { content: ''; position: absolute; width: 8px; height: 8px; top: 5px; left: 6px; background-color: rgba(0, 0, 0, 0.12); -webkit-transform: rotate(135deg); -moz-transform: rotate(135deg); -ms-transform: rotate(135deg); -o-transform: rotate(135deg); transform: rotate(135deg); }
+.content .our_team_container .team_list .team_item .item .team_leader_info .team_leader_intro { position: relative; width: 100%; font-size: 12px; line-height: 20px; color: #585858; }
+.content .our_team_container .team_list .team_item .item:hover { transform: translate(0, -20px); }
+.content .our_team_container .team_list .team_item .item:hover .team_leader_info { background-color: #f08200; }
+.content .our_team_container .team_list .team_item .item:hover .team_leader_info .team_leader_name, .content .our_team_container .team_list .team_item .item:hover .team_leader_info .team_leader_post, .content .our_team_container .team_list .team_item .item:hover .team_leader_info .team_leader_intro { color: #fff; }
+.content .our_team_container .team_list .team_item .item:hover .team_leader_info .icon:before { background-color: #fff; }
+.content .our_team_container .team_list .team_item .item:hover .team_leader_info .icon .icon_1 { background-color: #f08200; }
+.content .our_team_container .team_list .team_item .item:hover .team_leader_info .icon .icon_1::before { background-color: #fff; }
+.content .emp_style_container { float: left; width: 100%; position: relative; }
+.content .emp_style_container .title_container { position: absolute; width: 100%; padding: 40px 0; }
+.content .emp_style_container .title_container .title { position: relative; font-size: 3.2rem; margin: 0 auto; width: 200px; line-height: 80px; text-align: center; }
+.content .emp_style_container .title_container .title:after { content: ""; position: absolute; width: 100px; bottom: 0; left: 50px; height: 2px; background-color: #f08200; }
+.content .emp_style_container .emp_style { position: relative; padding: 20px 0; display: flex; justify-content: center; align-items: center; text-align: center; background: url("../../image/bm_style/bg.png") no-repeat; background-size: cover; }
+.content .emp_style_container .emp_style #canvas { position: absolute; top: 0; left: 0; background-color: #f5f5f5; }
+.content .emp_style_container .emp_style img { width: 80%; top: 80px; }

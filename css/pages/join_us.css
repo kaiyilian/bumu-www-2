@@ -1,0 +1,19 @@
+body img { position: relative; width: 100%; height: 100%; }
+body .content .block { position: relative; width: 100%; float: left; }
+body .content .block .title_container { position: relative; width: 100%; text-align: center; padding: 40px 0; float: left; }
+body .content .block .title_container .title { font-size: 38px; font-weight: bold; color: black; line-height: 60px; width: inherit; }
+body .content .block .title_container .title:after { display: none; }
+body .content .block .title_container .sec_title { position: relative; /*width: 100%;*/ font-size: 12px; line-height: 30px; float: left; width: auto; }
+body .content .block .title_container .sec_title .txt { color: #a3a3a3; }
+body .content .block .title_container .sec_title .info { margin: 0 5px; color: #f08200; }
+body .content .block .post_container { position: relative; width: 100%; margin: 10px 0 40px; float: left; padding: 20px 40px; border: 1px solid #bbbbbb; border-radius: 5px; }
+body .content .block .post_container .post_name_list { position: relative; width: 100%; float: left; margin: 10px 0; }
+body .content .block .post_container .post_name_list .post_name_item { position: relative; width: 18%; margin-right: 2%; margin-bottom: 10px; text-align: center; line-height: 40px; border: 1px solid #eeeeee; border-radius: 5px; cursor: pointer; }
+body .content .block .post_container .post_name_list .post_name_item.active { color: #fff; background-color: #f08200; }
+body .content .block .post_container .post_content_list { position: relative; width: 100%; height: 630px; float: left; padding: 20px 0; }
+body .content .block .post_container .post_content_list .post_content_item { position: relative; width: 100%; font-size: 12px; color: #666666; float: left; /*display: none;*/ }
+body .content .block .post_container .post_content_list .post_content_item .name { position: relative; width: 100%; line-height: 40px; height: 40px; font-weight: bold; font-size: 18px; padding-left: 10px; }
+body .content .block .post_container .post_content_list .post_content_item .name:before { content: ""; position: absolute; width: 4px; height: 20px; top: 10px; left: 0; background-color: #f08200; border-radius: 5px; }
+body .content .block .post_container .post_content_list .post_content_item span { display: block; width: 100%; line-height: 25px; text-indent: 20px; }
+body .content .block .post_container .post_content_list .post_content_item .txt { line-height: 35px; text-indent: 12px; }
+body .content .block .post_container .none { line-height: 400px; text-align: center; font-size: 3rem; }

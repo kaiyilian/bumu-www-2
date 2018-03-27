@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+		<meta charset="UTF-8">
+		<title>指向id=123的内容</title>
+		<style>
+				div {
+						height: 200px;
+						margin-bottom: 10px;
+						background: #eee;
+				} </style>
+		<!--jquery 引用-->
+		<script src="js/jquery/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+<a href="#123">点击这里立即跳转到id=123的元素位置</a>
+<a href="#125">点击这里立即跳转到id=125的元素位置</a>
+<a href="">点击这里立即头部</a>
+<div id="121">id=121</div>
+<div id="122">id=122</div>
+<div id="123">id=123</div>
+<div id="124">id=124</div>
+<div id="125">id=125</div>
+
+<script>
+
+		window.onload = function () {
+				var a = $("<div>");
+				a.addClass("aaa");
+				a.text("fasdfa");
+
+//				alert(a[0].outerHTML)
+		};
+
+		window.onhashchange = function () {
+				alert(location.hash);
+				if (location.hash === "") {
+						alert(0)
+				}
+				if (location.hash === "#123") {
+						alert(11)
+				}
+				if (location.hash === "#125") {
+						alert(22)
+				}
+		}
+</script>
+</body>
+</html>

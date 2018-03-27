@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>新闻详情</title>
+    <meta name='renderer' content='webkit'>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+
+    <link rel="icon" href="../../image/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../../image/favicon.ico" type="image/x-icon"/>
+
+    <!--jquery 引用-->
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <!--bootstrap样式-->
+    <link href="../../css/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/plugins/bootstrap/bootstrap-dropdown-hover.js"></script>
+    <!--弹框-->
+    <link href="../../css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <script src="../../js/plugins/toastr/toastr.min.js"></script>
+    <!--公共-->
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/bumu/header.css" rel="stylesheet">
+    <link href="../../css/bumu/footer.css" rel="stylesheet">
+    <script src="../../js/common.js"></script>
+    <script src="../../js/bumu/bumu.js"></script>
+    <script src="../../js/bumu/header.js"></script>
+    <script src="../../js/bumu/footer.js"></script>
+    <script src="../../js/urlGroups.js"></script>
+    <!--本页面-->
+    <link href="../../css/pages/news_detail.css" rel="stylesheet">
+    <script src="../../js/pages/news_detail.js"></script>
+
+</head>
+<body>
+
+<header>
+
+    <div class="row line">
+
+        <div class="col-xs-3">您好，欢迎光临不木官网！</div>
+
+        <div class="col-xs-3 pull-right" style="padding:0;">
+
+            <div class="col-xs-8" style="display: flex;padding: 0;">
+
+                <div class="icon_salary" style="">
+                    <img src="../../image/header/icon_salary.png" style="display: block;">
+                </div>
+
+                <a class="micro-blog" style="cursor: pointer;" target="_blank" onclick="header.goSalaryPage()">
+                    电子工资单加强版
+                </a>
+
+            </div>
+
+            <!--<span class="txt" onclick="header.goKeySass()">K-Saas平台</span>-->
+            <span class="btn btn-sm btn-primary pull-right" onclick="header.goTrailApply()">申请试用</span>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="cpy_info col-xs-3" onclick="header.goIndex()">
+            <img class="cpy_logo" src="../../image/logo.png"/>
+            <span class="cpy_name">招才进宝</span>
+        </div>
+
+        <div class="navbar_container col-xs-9">
+
+            <div class="col-xs-2 navbar-btn index" data-type="index">
+                首页
+            </div>
+
+            <div class="col-xs-2 navbar-btn dropdown product_service" data-type="product"
+                 data-submenu="true" data-page="pages/product_service/product_service.html">
+
+                <div class="dropdown-toggle"
+                     data-toggle="dropdown" data-hover="dropdown"
+                     aria-haspopup="true" aria-expanded="true">
+                    产品服务
+                </div>
+                <ul class="dropdown-menu">
+
+                    <li class="dropdown-submenu">
+                        <a>人事服务</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="rsfw?s=social_insurance_container">人事代理</a></li>
+                            <li><a data-anchor="rsfw?s=entry_container">人事派遣</a></li>
+                            <li><a data-anchor="rsfw?s=com_insurance_container">人事平台</a></li>
+                            <li><a data-anchor="rsfw?s=entry_container">薪酬代发</a></li>
+                            <li><a data-anchor="rsfw?s=entry_container">证件办理</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                        <a>灵活用工</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="lhyg">ITO</a></li>
+                            <li><a data-anchor="lhyg">服务流程外包</a></li>
+                            <li><a data-anchor="lhyg">岗位外包</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                        <a>综合福利</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="zhfl">雇主责任险</a></li>
+                            <li><a data-anchor="zhfl">补充医疗保险</a></li>
+                            <li><a data-anchor="zhfl">高端医疗险</a></li>
+                            <li><a data-anchor="zhfl">弹性福利</a></li>
+                            <li><a data-anchor="zhfl">薪酬优化</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+
+                        <!--<a data-toggle="dropdown" data-hover="dropdown"-->
+                        <!--data-close-others="false"-->
+                        <!--aria-haspopup="true" aria-expanded="true">-->
+                        <!--猎头RPO-->
+                        <!--</a>-->
+
+                        <a>猎头RPO</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="ltRPO">高级人才搜索</a></li>
+                            <li><a data-anchor="ltRPO">背景调查</a></li>
+                            <li><a data-anchor="ltRPO">RPO</a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col-xs-2 navbar-btn news_center active" data-type="news_center">
+                新闻中心
+            </div>
+
+            <div class="col-xs-2 navbar-btn dropdown join_us" data-type="join_us"
+                 data-submenu="true">
+
+                <div class="dropdown-toggle"
+                     data-toggle="dropdown" data-hover="dropdown"
+                     aria-haspopup="true" aria-expanded="true">
+                    加入不木
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a data-page="pages/join_us/bm_style.html">不木风采</a></li>
+                    <li><a data-page="pages/join_us/join_us.html">岗位需求</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-xs-2 navbar-btn contact_us" data-type="contact_us">
+                联系我们
+            </div>
+
+            <div class="col-xs-2 cpy_phone">
+                <span>400-671-0710</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<div class="content bg_color_grey_f5">
+
+    <div class="news_info">
+
+        <div class="n_tl_container">
+            新闻标题
+        </div>
+
+        <div class="n_author_container">
+            <span>作者：</span>
+            <span class="author">
+                <!--张飒-->
+            </span>
+        </div>
+
+        <div class="n_content_container"></div>
+
+        <div class="n_time_container">
+            <span>发布时间：</span>
+            <span class="pub_time">
+                <!--2018-03-12-->
+            </span>
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <div class="foot_1">
+
+        <div class="side left_side col-xs-4">
+
+            <div class="line">
+                <span class="btn_nav" data-type="contact_us">联系我们</span>
+                <span class="btn_nav" data-type="join_us">加入不木</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                    <img src="../../image/icon_footer_location.png"/>
+                </span>
+                <span class="txt">集团总部：苏州工业园区独墅湖高教区东平街266号</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                    <img src="../../image/icon_footer_phone.png"/>
+                </span>
+                <span class="txt">销售热线：400 -671 -0710</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                     <img src="../../image/icon_footer_email.png"/>
+                </span>
+                <span class="txt">联系邮箱：support@bumuyun.com</span>
+
+            </div>
+
+        </div>
+
+        <div class="side right_side col-xs-3">
+
+            <span class="item col-xs-6">
+                <span class="qrcode_img">
+                    <img src="../../image/icon_footer_qrcode_app.png"/>
+                </span>
+
+                <span class="qrcode_name">APP</span>
+            </span>
+
+            <span class="item col-xs-6">
+                <span class="qrcode_img">
+                    <img src="../../image/icon_footer_qrcode_weixin.png"/>
+                </span>
+
+                <span class="qrcode_name">微信</span>
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="foot_2">
+
+        <div class="copyright">
+            Copyright@2016 - 2018 苏州不木网络科技有限公司 版权归不木所有
+        </div>
+
+        <div class="copyright">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32059002001547">
+                <img src="../../image/index/icon_beian.png"/>
+                <p>
+                    苏公网安备 32059002001547号 苏ICP备16004093号-1
+                </p>
+            </a>
+        </div>
+
+    </div>
+
+</footer>
+
+<script>
+    document.write(unescape(cnzzStr));
+</script>
+
+</body>
+</html>

@@ -1,0 +1,105 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+body {
+    margin: 0;
+    /*padding-top: 64px;*/
+}
+
+.bg {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url("../../images/annual_bonus/annual_bonus_bg.png") no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}
+
+.annual_bonus {
+    position: absolute;
+    width: 50%;
+    height: 40px;
+    line-height: 38px;
+    bottom: 120px;
+    left: 25%;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: inset 0px 0px 5px 0px #fcc236;
+    -moz-box-shadow: inset 0px 0px 5px 0px #fcc236;
+    box-shadow: inset 0px 0px 5px 0px #fcc236;
+}
+
+.annual_bonus input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    padding: 0;
+    outline: 0;
+    background-color: transparent;
+    text-align: center;
+    font-size: 18px;
+}
+
+.btn_sure {
+    position: absolute;
+    background: -moz-linear-gradient(top, #fdca3b, #f2700b);
+    background: linear-gradient(top, #fdca3b, #f2700b);
+    background: -webkit-linear-gradient(top, #fdca3b, #f2700b);
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #fff;
+    bottom: 60px;
+    left: calc(50% - 25%);
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    -webkit-box-shadow: 0 5px 5px 0 #ec9940;
+    -moz-box-shadow: 0 5px 5px 0 #ec9940;
+    box-shadow: 0 5px 5px 0 #ec9940;
+}
+
+.btn_sure:active {
+    bottom: 55px;
+    -webkit-box-shadow: 0 1px 2px 0 #ec9940;
+    -moz-box-shadow: 0 1px 2px 0 #ec9940;
+    box-shadow: 0 1px 2px 0 #ec9940;
+}
+
+@media screen and (min-width: 321px) and (max-width: 374px) {
+
+    .annual_bonus {
+        bottom: 140px;
+    }
+
+    .btn_sure {
+        bottom: 70px;
+    }
+
+    .btn_sure:active {
+        bottom: 65px;
+    }
+}
+
+@media screen and (min-width: 374px) {
+
+    .annual_bonus {
+        bottom: 170px;
+    }
+
+    .btn_sure {
+        bottom: 100px;
+    }
+
+    .btn_sure:active {
+        bottom: 95px;
+    }
+
+}
+
+

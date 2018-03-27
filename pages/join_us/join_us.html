@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>加入不木</title>
+    <meta name='renderer' content='webkit'>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+
+    <link rel="icon" href="../../image/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../../image/favicon.ico" type="image/x-icon"/>
+
+    <!--jquery 引用-->
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <!--bootstrap样式-->
+    <link href="../../css/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/plugins/bootstrap/bootstrap-dropdown-hover.js"></script>
+    <!--toastr-->
+    <link href="../../css/plugins/toastr/toastr.min.css" rel="stylesheet">
+    <script src="../../js/plugins/toastr/toastr.min.js"></script>
+    <!--公共-->
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/bumu/header.css" rel="stylesheet">
+    <link href="../../css/bumu/footer.css" rel="stylesheet">
+    <script src="../../js/common.js"></script>
+    <script src="../../js/bumu/bumu.js"></script>
+    <script src="../../js/bumu/header.js"></script>
+    <script src="../../js/bumu/footer.js"></script>
+    <script src="../../js/urlGroups.js"></script>
+    <!--本页面-->
+    <link href="../../css/pages/join_us.css" rel="stylesheet">
+    <script src="../../js/pages/join_us.js"></script>
+
+</head>
+<body>
+
+<header>
+
+    <div class="row line">
+
+        <div class="col-xs-3">您好，欢迎光临不木官网！</div>
+
+        <div class="col-xs-3 pull-right" style="padding:0;">
+
+            <div class="col-xs-8" style="display: flex;padding: 0;">
+
+                <div class="icon_salary" style="">
+                    <img src="../../image/header/icon_salary.png" style="display: block;">
+                </div>
+
+                <a class="micro-blog" style="cursor: pointer;" target="_blank" onclick="header.goSalaryPage()">
+                    电子工资单加强版
+                </a>
+
+            </div>
+
+            <!--<span class="txt" onclick="header.goKeySass()">K-Saas平台</span>-->
+            <span class="btn btn-sm btn-primary pull-right" onclick="header.goTrailApply()">申请试用</span>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="cpy_info col-xs-3" onclick="header.goIndex()">
+            <img class="cpy_logo" src="../../image/logo.png"/>
+            <span class="cpy_name">招才进宝</span>
+        </div>
+
+        <div class="navbar_container col-xs-9">
+
+            <div class="col-xs-2 navbar-btn index" data-type="index">
+                首页
+            </div>
+
+            <div class="col-xs-2 navbar-btn dropdown product_service" data-type="product"
+                 data-submenu="true" data-page="pages/product_service/product_service.html">
+
+                <div class="dropdown-toggle"
+                     data-toggle="dropdown" data-hover="dropdown"
+                     aria-haspopup="true" aria-expanded="true">
+                    产品服务
+                </div>
+                <ul class="dropdown-menu">
+
+                    <li class="dropdown-submenu">
+                        <a>人事服务</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="rsfw?s=social_insurance_container">人事代理</a></li>
+                            <li><a data-anchor="rsfw?s=entry_container">人事派遣</a></li>
+                            <li><a data-anchor="rsfw?s=com_insurance_container">人事平台</a></li>
+                            <li><a data-anchor="rsfw?s=entry_container">薪酬代发</a></li>
+                            <li><a data-anchor="rsfw?s=entry_container">证件办理</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                        <a>灵活用工</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="lhyg">ITO</a></li>
+                            <li><a data-anchor="lhyg">服务流程外包</a></li>
+                            <li><a data-anchor="lhyg">岗位外包</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                        <a>综合福利</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="zhfl">雇主责任险</a></li>
+                            <li><a data-anchor="zhfl">补充医疗保险</a></li>
+                            <li><a data-anchor="zhfl">高端医疗险</a></li>
+                            <li><a data-anchor="zhfl">弹性福利</a></li>
+                            <li><a data-anchor="zhfl">薪酬优化</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+
+                        <!--<a data-toggle="dropdown" data-hover="dropdown"-->
+                        <!--data-close-others="false"-->
+                        <!--aria-haspopup="true" aria-expanded="true">-->
+                        <!--猎头RPO-->
+                        <!--</a>-->
+
+                        <a>猎头RPO</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="ltRPO">高级人才搜索</a></li>
+                            <li><a data-anchor="ltRPO">背景调查</a></li>
+                            <li><a data-anchor="ltRPO">RPO</a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col-xs-2 navbar-btn news_center" data-type="news_center">
+                新闻中心
+            </div>
+
+            <div class="col-xs-2 navbar-btn dropdown join_us active" data-type="join_us"
+                 data-submenu="true">
+
+                <div class="dropdown-toggle"
+                     data-toggle="dropdown" data-hover="dropdown"
+                     aria-haspopup="true" aria-expanded="true">
+                    加入不木
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a data-page="pages/join_us/bm_style.html">不木风采</a></li>
+                    <li><a data-page="pages/join_us/join_us.html">岗位需求</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-xs-2 navbar-btn contact_us" data-type="contact_us">
+                联系我们
+            </div>
+
+            <div class="col-xs-2 cpy_phone">
+                <span>400-671-0710</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<div class="content">
+
+    <div class="block">
+
+        <div class="title_container">
+            <div class="title">我们期待你的加入</div>
+            <div class="sec_title">
+                <span class="txt">有意者可将简历发送到HR邮箱：</span>
+                <span class="info e_mail">support@bumuyun.com</span>
+                <span class="txt">或电话：</span>
+                <span class="info phone">0512-67903209</span>
+                <span class="txt">联系我们，期待您的加入。</span>
+            </div>
+        </div>
+
+        <div class="post_container">
+
+            <div class="post_name_list"></div>
+
+            <div class="post_content_list">
+
+                <div class="post_content_item">
+
+                    <div class="name"></div>
+
+                    <div class="txt">岗位职责：</div>
+                    <div class="post_duty"></div>
+
+                    <div class="txt">任职要求：</div>
+                    <div class="post_require"></div>
+
+                </div>
+
+            </div>
+
+            <div class="none">
+                暂无招聘信息
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+<footer>
+
+    <div class="foot_1">
+
+        <div class="side left_side col-xs-4">
+
+            <div class="line">
+                <span class="btn_nav" data-type="contact_us">联系我们</span>
+                <span class="btn_nav" data-type="join_us">加入不木</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                    <img src="../../image/icon_footer_location.png"/>
+                </span>
+                <span class="txt">集团总部：苏州工业园区独墅湖高教区东平街266号</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                    <img src="../../image/icon_footer_phone.png"/>
+                </span>
+                <span class="txt">销售热线：400 -671 -0710</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                     <img src="../../image/icon_footer_email.png"/>
+                </span>
+                <span class="txt">联系邮箱：support@bumuyun.com</span>
+
+            </div>
+
+        </div>
+
+        <div class="side right_side col-xs-3">
+
+            <span class="item col-xs-6">
+                <span class="qrcode_img">
+                    <img src="../../image/icon_footer_qrcode_app.png"/>
+                </span>
+
+                <span class="qrcode_name">APP</span>
+            </span>
+
+            <span class="item col-xs-6">
+                <span class="qrcode_img">
+                    <img src="../../image/icon_footer_qrcode_weixin.png"/>
+                </span>
+
+                <span class="qrcode_name">微信</span>
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="foot_2">
+
+        <div class="copyright">
+            Copyright@2016 - 2018 苏州不木网络科技有限公司 版权归不木所有
+        </div>
+
+        <div class="copyright">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32059002001547">
+                <img src="../../image/index/icon_beian.png"/>
+                <p>
+                    苏公网安备 32059002001547号 苏ICP备16004093号-1
+                </p>
+            </a>
+        </div>
+
+    </div>
+
+</footer>
+
+
+<div class="post_container" style="display: none;">
+
+    <div class="post_name_list">
+
+        <span class="post_name_item active" data-containerName="container_1">互联网产品经理</span>
+        <span class="post_name_item" data-containerName="container_2">人事专员（偏招聘）</span>
+        <span class="post_name_item" data-containerName="container_3">品牌经理/公关经理</span>
+        <span class="post_name_item" data-containerName="container_4">薪资专员</span>
+        <span class="post_name_item" data-containerName="container_5">.NET项目经理</span>
+        <span class="post_name_item" data-containerName="container_6">安卓开发工程师</span>
+        <span class="post_name_item" data-containerName="container_7">Java高级工程师</span>
+        <span class="post_name_item" data-containerName="container_8">运营经理</span>
+        <span class="post_name_item" data-containerName="container_9">客服/驻场客服</span>
+        <span class="post_name_item" data-containerName="container_10">销售经理</span>
+
+    </div>
+
+    <div class="post_content_list">
+
+        <div class="post_content_item container_1">
+
+            <div class="name">互联网产品经理</div>
+
+            <div class="txt">岗位职责：</div>
+            <div class="post_duty">
+                <span>1、负责APP产品策划工作，改善用户体验、各操作流程优化；</span>
+                <span>2、协助分析用户心理，挖掘互联网用户或社区需求，规划新功能；</span>
+                <span>3、 负责产品的原型和交互设计、文档撰写；</span>
+                <span>4、负责协调研发、设计、市场等资源部门，推动产品项目开发、上线及持续运营，达成产品目标；</span>
+                <span>5、 参与分析运营数据、分析竞争对手的状况。</span>
+            </div>
+
+            <div class="txt">任职要求：</div>
+            <div class="post_require">
+                <span>1、大专及以上学历，2年以上APP产品策划经验；</span>
+                <span>2、熟悉工具类、电商类产品策划、原型、交互设计的方法及相关工具软件；</span>
+                <span>3、关注、热爱互联网新生产物，对互联网市场的敏感度高。</span>
+                <span>4、具备良好的互联网产品需求分析、逻辑思维和产品设计能力，了解用户心理，关注用户体验；</span>
+                <span>5、有较丰富的产品规划方案编写经验，思维敏捷、富有创新精神，对数据变化敏感，具备良好的分析判断能力。</span>
+            </div>
+
+        </div>
+
+        <div class="post_content_item container_2">
+
+            <div class="name">人事专员（偏招聘）</div>
+
+            <span class="txt">岗位职责：</span>
+            <span>1、全面公司招聘工作；</span>
+            <span>2、进行职位需求分析，能迅速甄选有效简历推荐给用人部门；</span>
+            <span>3、通过有效的电话沟通技巧与候选人进行沟通，预约面试；</span>
+            <span>4、录入和维护招聘信息，即时向主管进行信息反馈；</span>
+            <span>6、跟踪招聘进度，采取有效措施改进工作中的不足，确保目标达成；</span>
+            <span>7、招聘渠道拓展和候选人脉资源的挖掘；</span>
+            <span>8、Offer洽谈和入职安排；</span>
+            <span>9、配合公司其他各项工作的开展。</span>
+
+            <span class="txt">招聘要求：</span>
+            <span>1、大专及以上学历，人力资源相关专业优先；</span>
+            <span>2、1年及以上招聘经验优先；</span>
+            <span>2、良好的语言表达和沟通能力，普通话标准；</span>
+            <span>3、良好的学习能力，善于积极思考和快速学习；</span>
+            <span>4、强大的抗压能力，有创业心态者优先考虑；</span>
+            <span>5、良好的执行力和团队合作，能按时、按质完成日常招聘相关工作；</span>
+            <span>6、有猎头行业或相关招聘经验者优先考虑。</span>
+
+        </div>
+
+        <div class="post_content_item container_3">
+
+            <div class="name">品牌经理/公关经理</div>
+
+            <span class="txt">岗位职责：</span>
+            <span>1、负责品牌战略计划的执行并对执行过程进行监控，对战略结果的实现负责；</span>
+            <span>2、利用并整合公司内外部资源，参与制定创新性的市场推广策略、方案，协调相关部门执行，并对推广效果进行评估、总结；</span>
+            <span>3、监控分析行业市场动向，对市场需求作出快速反应，促进品牌价值最大化；</span>
+            <span>4、负责对外关系的维护、开拓以及配合合作的谈判；时刻了解周边竞争对手的动态及客户群体需求的特征，定期形成数据分析报告；</span>
+            <span>5、参与策划与实施广告策划案与品牌推广案；</span>
+            <span>6、及时把握公司品牌的市场状况，了解同业竞争策略与消费者有效需求，为平台品牌形象定位提供科学的决策依据。</span>
+
+            <span class="txt">招聘要求：</span>
+            <span>1、本科及以上学历，5年以上品牌营销、人力资源服务业品牌、市场推广、品牌营销相关工作经验。</span>
+            <span>2、擅长品牌策划、媒体公关，具备良好的品牌管理能力、敏锐的策略思考能力及较强的沟通协调能力。</span>
+            <span>3、客户与市场洞察力、创新精神强， 卓越的执行力。</span>
+            <span>4、了解市场动态，尤其是人力资源服务行业，依据市场变化适时策划制定集团品牌及产品推广方案。</span>
+
+        </div>
+
+        <div class="post_content_item container_4">
+
+            <div class="name">薪资专员</div>
+
+            <span class="txt">岗位职责：</span>
+            <span>1.考勤计算</span>
+            <span>2.薪资审核</span>
+            <span>3.工资代发</span>
+            <span>4.发薪后异常情况处理</span>
+            <span>5.工资单制作</span>
+            <span>6.上级主管安排的其他工作</span>
+
+            <span class="txt">任职资格：</span>
+            <span>1.熟练使用各类办公软件,特别是Excel</span>
+            <span>2.对数据较为敏感度、具备一定的数据分析能力</span>
+            <span>3.具有一定的逻辑思维和创新思维能力</span>
+            <span>4.具有较强的沟通、协调能力和团队意识</span>
+            <span>5.具有一定的抗压能力，工作责任心强</span>
+            <span>6.为人开朗亲和，能主动担当，配合上级主管的安排</span>
+            <span>7.专业不限，工作经验应届生及以上；</span>
+
+        </div>
+
+        <div class="post_content_item container_5">
+
+            <div class="name">.NET项目经理</div>
+
+            <span class="txt">岗位要求：</span>
+            <span>1. 负责项目需求调研、项目需求分析、项目概要设计、项目详细设计、核心部分代码设计；</span>
+            <span>2. 根据公司的技术文档规范编写相应的技术文档；</span>
+            <span>3. 负责各模块的日常开发和维护工作，及时响应业务内容的技术需求；</span>
+            <span>4. 根据需求制定合理的开发测试进度，协助完成项目的测试、系统交付工作，对项目实施提供支持；</span>
+            <span>5. 指导开发团队的日常工作，解决开发中的技术问题；</span>
+            <span>6. 及时了解团队成员的工作情况，并能快速的解决所遇到的难题，保证按规定质量和进度达到目标；</span>
+
+            <span class="txt">职位要求：</span>
+            <span>1、计算机或相关专业大专或以上学历;5年以上.net开发经验，2年以上.net架构产品设计、架构经验；具备项目管理经验；</span>
+            <span>2、熟练掌握ASP.NET/C#,ADO.NET/ASP.NET MVC等编程技术；熟练掌握CSS、Div、Ajax等相关技术；</span>
+            <span>3、精通.net下的C/S、B/S系统开发，精通.net框架类库，如WCF, WPF, WWF, WinForms,Asp.net，Ado.net等；熟悉winform、网站开发(c#)，具备一定的面向对象思想；</span>
+            <span>4、能熟练编写SQL以及后台存储过程；</span>
+            <span>5、有面向对象的开发经验，熟悉软件开发流程，设计模式；</span>
+            <span>6、具备良好的理解和沟通能力，能编写相关技术文档;对工作认真负责，能够承受工作压力，有团队合作精神；</span>
+            <span>7、有制造业项目经验者优先考虑。</span>
+
+        </div>
+
+        <div class="post_content_item container_6">
+
+            <div class="name">安卓开发工程师</div>
+
+            <span class="txt">职位描述：</span>
+            <span>1.根据需求完成Android软件系统的设计、开发、测试和维护；</span>
+            <span>2．撰写模块设计说明书及相关技术文档</span>
+            <span>3．对个人所负责的应用模块进行充分的单元测试；</span>
+            <span>4．对已有系统提供必要的技术支持，并承担相关功能改进任务。</span>
+
+            <span class="txt">任职要求：</span>
+            <span>1、2年以上Android开发工作经验；精通Android开发平台及框架原理；熟悉OS系统体系结构、framework、以及底层库</span>
+            <span>2、熟悉Android开发架构，网络数据传输，本地数据存储（数据库）；</span>
+            <span>3、有责任心，有团队合作精神，能承担较大工作压力；</span>
+            <span>4、有独立完成软件的开发经验；</span>
+
+        </div>
+
+        <div class="post_content_item container_7">
+
+            <div class="name">Java高级工程师</div>
+
+            <span class="txt">职位描述：</span>
+            <span>1.大学本科学历，计算机及相关专业</span>
+            <span>2.3-5年Java Web开发经验，熟悉Java EE规范</span>
+            <span>3.熟练掌握Java编程语言及相关知识；熟悉Web开发常见的框架和技术（Servlet， JSP，JDBC，Spring，Hibernate）；</span>
+            <span>4.熟悉MySQL数据库；熟悉Oracle或者其他数据库更佳</span>
+            <span>5.熟练掌握浏览器前端的相关技术（Javascript，CSS3，HTML5），熟悉JQuery，EasyUI等框架</span>
+            <span>6.熟悉常见的设计模式</span>
+            <span>7.熟悉IntelliJ IDEA开发环境；熟悉Tomcat或常见的应用服务器</span>
+            <span>8.熟悉Linux，NoSQL，Redis等技术的优先考虑</span>
+            <span>9.有过移动互联网项目经验优先考虑</span>
+            <span>10.工作认真负责，细心，有条理；工作积极主动，善于学习提高；可以比较顺畅的和他人沟通合作 。</span>
+
+
+            <span class="txt">岗位职责：</span>
+            <span>1.参与需求和设计评审</span>
+            <span>2.完成产品后台功能的开发</span>
+            <span>3.编写单元测试并保证开发质量</span>
+            <span>4.修复产品的bug</span>
+            <span>5.撰写产品相关文档</span>
+            <span>6.完成其他相关的任务</span>
+
+        </div>
+
+        <div class="post_content_item container_8">
+
+            <div class="name">运营经理</div>
+
+            <span class="txt">岗位职责：</span>
+            <span>1、参与项目年度预算拟定；</span>
+            <span>2、围绕客户的需求进行项目管理，完成项目各项指标（如成本，利润，运营等）；</span>
+            <span>3、负责组织制订生产工作计划，协调与客户各部门关系；</span>
+            <span>4、负责项目队伍的建设与考核工作；</span>
+            <span>5、及时处理项目生产过程中出现的其他问题；</span>
+            <span>6、建立良好的客户关系，进行客户需求深挖；</span>
+            <span>7.根据公司整体销售目标，制定所负责区域的营销计划，分解销售目标、完成销售任务，跟进总部的销售政策的落实和各项制度的贯彻落实；完成集团公司下达的综合目标；</span>
+            <span>8、积极协调和激励分公司各部门的工作；与集团各部门保持良好通畅的联系，及时控制、解决工作中出现的问题；</span>
+            <span>9、密切关注人力资源市场动向，及时反馈人力资源信息，并对客户进行评估；</span>
+
+            <span class="txt">岗位要求：</span>
+            <span>1、5年及以上大型企业相关的制造或管理经验；</span>
+            <span>2、有良好的客户沟通能力和亲和力，具有人脉思维；</span>
+            <span>3、目标意识明确，善于团队管理，并认同公司的企业文化；</span>
+            <span>4.具有人力资源服务机构 市场营销、组织管理、带领团队的3年以上的经验 或者</span>
+            <span>制造企业的招聘经理或者人力资源经理3年以上；有较好的管理能力、沟通能力；有较强的财务成本控制意识，对市场尤其是人力资源服务的第三方企业具备专业能力；</span>
+            <span>5、带领部门工作，做好部门的培训，业务分析、绩效考核等工作；</span>
+            <span>6、对人力资源服务有策划和项目评估能力，积极完成公司销售指标；</span>
+            <span>7、对服务市场、营销产品有目标和明晰的方向，有开发客户及维护客户能力；</span>
+            <span>8、有一定渠道和资源者优先；担任过分公司管理职位者优先考虑；</span>
+
+        </div>
+
+        <div class="post_content_item container_9">
+
+            <div class="name">客服/驻场客服</div>
+
+            <span class="txt">岗位要求：</span>
+            <span>1、责任心强、工作细致认真、具有良好的沟通能力</span>
+            <span>2、具有较强的服务意识和文字表达能力</span>
+            <span>3、熟悉office办公软件</span>
+            <span>4、熟知人力资源行业的政策法规</span>
+
+            <span class="txt">岗位职责：</span>
+            <span>1、严格执行各业务流程时限标准，并与客户核对材料的一致性</span>
+            <span>2、根据客户要求及日常工作安排，处理人力资源相关业务</span>
+            <span>3、及时反馈工作进度及结果，为客户提供政策的咨询和建议</span>
+            <span>4、收集、通报、反馈人力资源相关政策及信息。</span>
+
+        </div>
+
+        <div class="post_content_item container_10">
+
+            <div class="name">销售经理</div>
+
+            <span class="txt">职位描述：</span>
+            <span>1、战略客户开发：根据公司战略发展，拓宽业务渠道，不断开拓新型BPO业务；</span>
+            <span>2、负责战略客户接洽，商务谈判、招投标管理及最终达成合作；</span>
+            <span>3、通过各种形式的客户接洽，提高客户满意度，及时处理客户异议和投诉，建立、巩固 均衡的客户关系平台，跟踪客户需求动态、深挖客户需求；</span>
+            <span>4、协助、配合、推进公司其他项目部的业务开发、方案准备等工作；</span>
+            <span>5、负责组建、培养营销体系人员；</span>
+            <span>6、具有很强的成本管控意识；</span>
+            <span>7、及时完成公司总经理安排事宜，定期跟进并做业务汇总。</span>
+
+            <span class="txt">任职资格：</span>
+            <span>1、销售经验5年以上,同岗位工作经验2年以上，了解人力资源行业业务模式；</span>
+            <span>2、拥有战略观，市场敏感度，对市场具有很强的分析能力，并有独到的见解主张；</span>
+            <span>3、有KA工作经历，互联网思维，懂得在互联网大形势下的营销结合；</span>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+    document.write(unescape(cnzzStr));
+</script>
+
+</body>
+</html>

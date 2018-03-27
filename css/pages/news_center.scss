@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+$max-width: 1000px; //页面最大宽度
+$news-item-line-height: 40px; //新闻列表行高
+$news-list-height: 400px; //新闻列表总体高度
+
+.content{
+  .block_1 {
+    width: 100%;
+    float: left;
+
+    .title_container {
+      line-height: 60px;
+
+      .title {
+        position: relative;
+        width: $max-width;
+        margin: 0 auto;
+        font-weight: bold;
+        padding-left: 15px;
+
+        &:before {
+          content: "";
+          position: absolute;
+          width: 14px;
+          height: 2px;
+          background-color: #f18a10;
+          border-radius: 3px;
+          bottom: 8px;
+          left: 16px;
+        }
+
+      }
+
+    }
+
+    .news_list {
+      //height: $news-list-height;
+      float: left;
+      width: 100%;
+      margin-bottom: 10px;
+      min-height: 300px;
+
+      .item {
+
+        &:nth-child(2n+1) {
+          background-color: #f5f5f5;
+        }
+
+        .row {
+          line-height: $news-item-line-height;
+          width: $max-width;
+          margin: 0 auto;
+          font-size: 1.3rem;
+
+          .news_tl {
+            cursor: pointer;
+            &:hover {
+              color: #337ab7;
+            }
+          }
+
+          .pub_time {
+            text-align: right;
+          }
+
+        }
+
+      }
+
+    }
+
+    .paginate-container {
+      clear: both;
+      text-align: right;
+      margin: 0 auto;
+      width: $max-width;
+    }
+
+  }
+
+  .none {
+    text-align: center;
+    line-height: 400px;
+    font-size: 3rem;
+  }
+
+  img {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+
+  .pagination > li {
+    cursor: pointer;
+  }
+}

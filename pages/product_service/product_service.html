@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>产品服务</title>
+    <meta name='renderer' content='webkit'>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1"/>
+
+    <link rel="icon" href="../../image/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="../../image/favicon.ico" type="image/x-icon"/>
+
+    <!--jquery 引用-->
+    <script src="../../js/jquery/jquery-2.1.1.min.js"></script>
+    <!--bootstrap样式-->
+    <link href="../../css/plugins/bootstrap/bootstrap.min.css" rel="stylesheet">
+    <script src="../../js/plugins/bootstrap/bootstrap-dropdown-hover.js"></script>
+    <!--公共-->
+    <link href="../../css/common.css" rel="stylesheet">
+    <link href="../../css/bumu/header.css" rel="stylesheet">
+    <link href="../../css/bumu/footer.css" rel="stylesheet">
+    <script src="../../js/common.js"></script>
+    <script src="../../js/bumu/bumu.js"></script>
+    <script src="../../js/bumu/header.js"></script>
+    <script src="../../js/bumu/footer.js"></script>
+    <!--本页面-->
+    <link rel="stylesheet" href="../../css/pages/product_service.css">
+    <script src="../../js/pages/product_service.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="row line">
+
+        <div class="col-xs-3">您好，欢迎光临不木官网！</div>
+
+        <div class="col-xs-3 pull-right" style="padding:0;">
+
+            <div class="col-xs-8" style="display: flex;padding: 0;">
+
+                <div class="icon_salary" style="">
+                    <img src="../../image/header/icon_salary.png" style="display: block;">
+                </div>
+
+                <a class="micro-blog" style="cursor: pointer;" target="_blank" onclick="header.goSalaryPage()">
+                    电子工资单加强版
+                </a>
+
+            </div>
+
+            <!--<span class="txt" onclick="header.goKeySass()">K-Saas平台</span>-->
+            <span class="btn btn-sm btn-primary pull-right" onclick="header.goTrailApply()">申请试用</span>
+
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="cpy_info col-xs-3" onclick="header.goIndex()">
+            <img class="cpy_logo" src="../../image/logo.png"/>
+            <span class="cpy_name">招才进宝</span>
+        </div>
+
+        <div class="navbar_container col-xs-9">
+
+            <div class="col-xs-2 navbar-btn index" data-type="index">
+                首页
+            </div>
+
+            <div class="col-xs-2 navbar-btn dropdown product_service active" data-type="product"
+                 data-submenu="true" data-page="pages/product_service/product_service.html">
+
+                <div class="dropdown-toggle"
+                     data-toggle="dropdown" data-hover="dropdown"
+                     aria-haspopup="true" aria-expanded="true">
+                    产品服务
+                </div>
+                <ul class="dropdown-menu">
+
+                    <li class="dropdown-submenu">
+                        <a>人事服务</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="rsfw?s=social_insurance_container">人事代理</a></li>
+                            <li><a data-anchor="rsfw?s=entry_container">人事派遣</a></li>
+                            <li><a data-anchor="rsfw?s=com_insurance_container">人事平台</a></li>
+                            <li><a data-anchor="rsfw?s=entry_container">薪酬代发</a></li>
+                            <li><a data-anchor="rsfw?s=entry_container">证件办理</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                        <a>灵活用工</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="lhyg">ITO</a></li>
+                            <li><a data-anchor="lhyg">服务流程外包</a></li>
+                            <li><a data-anchor="lhyg">岗位外包</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+                        <a>综合福利</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="zhfl">雇主责任险</a></li>
+                            <li><a data-anchor="zhfl">补充医疗保险</a></li>
+                            <li><a data-anchor="zhfl">高端医疗险</a></li>
+                            <li><a data-anchor="zhfl">弹性福利</a></li>
+                            <li><a data-anchor="zhfl">薪酬优化</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown-submenu">
+
+                        <!--<a data-toggle="dropdown" data-hover="dropdown"-->
+                        <!--data-close-others="false"-->
+                        <!--aria-haspopup="true" aria-expanded="true">-->
+                        <!--猎头RPO-->
+                        <!--</a>-->
+
+                        <a>猎头RPO</a>
+                        <ul class="dropdown-menu">
+                            <li><a data-anchor="ltRPO">高级人才搜索</a></li>
+                            <li><a data-anchor="ltRPO">背景调查</a></li>
+                            <li><a data-anchor="ltRPO">RPO</a></li>
+                        </ul>
+
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="col-xs-2 navbar-btn news_center" data-type="news_center">
+                新闻中心
+            </div>
+
+            <div class="col-xs-2 navbar-btn dropdown join_us" data-type="join_us"
+                 data-submenu="true">
+
+                <div class="dropdown-toggle"
+                     data-toggle="dropdown" data-hover="dropdown"
+                     aria-haspopup="true" aria-expanded="true">
+                    加入不木
+                </div>
+                <ul class="dropdown-menu">
+                    <li><a data-page="pages/join_us/bm_style.html">不木风采</a></li>
+                    <li><a data-page="pages/join_us/join_us.html">岗位需求</a></li>
+                </ul>
+
+            </div>
+
+            <div class="col-xs-2 navbar-btn contact_us" data-type="contact_us">
+                联系我们
+            </div>
+
+            <div class="col-xs-2 cpy_phone">
+                <span>400-671-0710</span>
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+<div class="content">
+
+    <div class="block block_3 our_service_container" id="rsfw">
+
+        <div class="title_container">
+            <div class="title">人事服务</div>
+            <div class="sec_title">招才进宝凭借覆盖全国的直营服务网络、专业的服务团队，协助企业将传统HR部门管理事务简化，帮助企业HR创造更卓越的人力价值，帮助客户从“事务性”向“战略性”转型。
+            </div>
+        </div>
+
+        <div class="service_name_list">
+            <span class="service_name_item active" data-cotainername="social_insurance_container">人事代理</span>
+            <span class="service_name_item" data-cotainername="entry_container">人事派遣</span>
+            <span class="service_name_item" data-cotainername="com_insurance_container">人事平台</span>
+        </div>
+
+        <div class="service_container social_insurance_container" style="display: block;">
+
+            <div class="line_1">人事代理服务</div>
+            <!--<div class="line_2">社保的事，交给我来办，让您放心，安心</div>-->
+
+            <ul>
+                <li>代理缴纳社会保险及住房公积金</li>
+                <li>员工社会保险和住房公积金基数申报、调整</li>
+                <li>招退工入离职手续办理</li>
+                <li>日常社保政策咨询</li>
+                <li>代为操作薪资发放，代缴个人所得税</li>
+            </ul>
+
+            <div class="img" style="top:50px;">
+                <img src="../../image/product_service/ps_rsdl.png">
+            </div>
+
+        </div>
+
+        <div class="service_container entry_container" style="display: none;">
+
+            <div class="line_1">人事派遣服务</div>
+            <!--<div class="line_2">基于人力资源云服务的一键认证和识别管理系统</div>-->
+
+            <div>
+
+                <ul>
+                    <li>员工劳动合同签订及管理</li>
+                    <li>代理缴纳社会保险及住房公积金</li>
+                    <li>员工社会保险和住房公积金基数申报、调整</li>
+                    <li>招退工入离职手续办理</li>
+                </ul>
+                <ul>
+                    <li>相关人事证明出具</li>
+                    <li>日常社保政策咨询</li>
+                    <li>薪资发放，代缴个人所得税</li>
+                    <li>上海居住证积分办理</li>
+                </ul>
+
+            </div>
+
+            <div class="img">
+                <img src="../../image/product_service/ps_rspq.png">
+            </div>
+
+        </div>
+
+        <div class="service_container com_insurance_container" style="display: none;">
+
+            <div class="line_1">人事平台</div>
+            <div class="line_2">
+                招才进宝“Key-Saas”平台依托国内领先的云计算能力，为客户提供全线上化的人事和财务管理服务，包含劳动合同签署、员工信息和入离职管理、社保缴纳、个税申报、考勤审批、算发薪、员工背景调查、大数据人才测评等服务，辅以全球顶级数据存储和安全加密能力，最大化降低客户管理成本，提升效率、便捷和私密性。
+            </div>
+
+            <div>
+                <ul>
+                    <li>电子薪资单</li>
+                    <li>工资钱包</li>
+                    <li>加班助手</li>
+                    <li>人力报表统计</li>
+                </ul>
+                <ul>
+                    <li>一键线上入职</li>
+                    <li>合同云签存储</li>
+                    <li>体检查询</li>
+                    <li>智能云考勤</li>
+                </ul>
+            </div>
+
+
+            <div class="img">
+                <img src="../../image/product_service/ps_rspt.jpg">
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="block ps_lhyg_wrapper" id="lhyg">
+        <div class="title_container">
+            <div class="title">灵活用工</div>
+            <div class="sec_title">以人事事务服务、人才供应链管理为方向的专业外包，提供短中长期项目及人员外包。</div>
+            <div class="sec_title">通过岗位外包、服务流程外包，支持客户优化人员结构，提升运营效能，增强组织灵活性、降低风险。</div>
+        </div>
+        <div class="ps_lhyg_img">
+            <img src="../../image/product_service/ps_lhyg.png">
+        </div>
+    </div>
+
+    <div class="block ps_zhfl_wrapper" id="zhfl">
+        <div class="title_container">
+            <div class="title">综合福利</div>
+            <div class="sec_title">综合福利服务，满足企业多层次的福利需求，充分体现公司对员工的关爱，提升员工对企业的忠诚度，吸引和留住优秀员工。</div>
+        </div>
+        <div class="ps_zhfl_img">
+            <img src="../../image/product_service/ps_zhfl.png">
+        </div>
+    </div>
+
+    <div class="block ps_ltRPO_wrapper" id="ltRPO">
+        <div class="title_container">
+            <div class="title">猎头RPO</div>
+            <div class="sec_title">凭借专业的资深招聘团队，解决企业发展过程中核心人才缺口，助力企业快速发展。</div>
+            <div class="sec_title">RPO服务团队核心成员均来自汇思BPO事业部，凭借平均10年以上专业的从业经验为客户高效解决实际问题。</div>
+        </div>
+        <div class="ps_ltRPO_img">
+            <img src="../../image/product_service/ps_ltPRO.jpg">
+            <div class="ps_ltRPO_img_txt">
+                <p>房地产/建筑</p>
+                <p>IT/软件/硬件</p>
+                <p>移动互联网</p>
+                <p>互联网/电子商务</p>
+            </div>
+            <div class="ps_ltRPO_img_txt ps_ltRPO_img_txtR">
+                <p>广告/传媒/会展</p>
+                <p>快速消费品/耐用消费品</p>
+                <p>各行业通知类管理职位</p>
+            </div>
+        </div>
+        <div class="ps_ltRPO_txt">
+            <span>RPO岗位覆盖类型：</span>
+            <span>总包类</span>
+            <span>营销类</span>
+            <span>技术类</span>
+            <span>职能类</span>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+
+    <div class="foot_1">
+
+        <div class="side left_side col-xs-4">
+
+            <div class="line">
+                <span class="btn_nav" data-type="contact_us">联系我们</span>
+                <span class="btn_nav" data-type="join_us">加入不木</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                    <img src="../../image/icon_footer_location.png"/>
+                </span>
+                <span class="txt">集团总部：苏州工业园区独墅湖高教区东平街266号</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                    <img src="../../image/icon_footer_phone.png"/>
+                </span>
+                <span class="txt">销售热线：400 -671 -0710</span>
+            </div>
+
+            <div class="line">
+                <span class="icon">
+                     <img src="../../image/icon_footer_email.png"/>
+                </span>
+                <span class="txt">联系邮箱：support@bumuyun.com</span>
+
+            </div>
+
+        </div>
+
+        <div class="side right_side col-xs-3">
+
+            <span class="item col-xs-6">
+                <span class="qrcode_img">
+                    <img src="../../image/icon_footer_qrcode_app.png"/>
+                </span>
+
+                <span class="qrcode_name">APP</span>
+            </span>
+
+            <span class="item col-xs-6">
+                <span class="qrcode_img">
+                    <img src="../../image/icon_footer_qrcode_weixin.png"/>
+                </span>
+
+                <span class="qrcode_name">微信</span>
+            </span>
+
+        </div>
+
+    </div>
+
+    <div class="foot_2">
+
+        <div class="copyright">
+            Copyright@2016 - 2018 苏州不木网络科技有限公司 版权归不木所有
+        </div>
+
+        <div class="copyright">
+            <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=32059002001547">
+                <img src="../../image/index/icon_beian.png"/>
+                <p>
+                    苏公网安备 32059002001547号 苏ICP备16004093号-1
+                </p>
+            </a>
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+
+</html>

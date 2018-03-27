@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+$max-width: 1000px; //页面最大宽度
+
+.content{
+  background-color: #fff;
+
+  .news_info {
+    padding: 10px 0;
+    width: $max-width;
+    margin: 0 auto;
+
+    .n_tl_container {
+      line-height: 50px;
+      text-align: center;
+      font-size: 1.6rem;
+    }
+
+    .n_author_container {
+      display: flex;
+      //text-align: center;
+      line-height: 30px;
+      font-size: 1.3rem;
+      justify-content: center;
+
+      //span {
+      //  display: inline-block;
+      //}
+
+    }
+
+    .n_content_container {
+      padding: 30px 0;
+    }
+
+    .n_time_container {
+      //text-align: right;
+      line-height: 50px;
+      display: flex;
+      justify-content: flex-end;
+      font-size: 1.3rem;
+      color: #666;
+    }
+
+    .none{
+      text-align: center;
+      line-height:300px;
+      font-size:3.2rem;
+    }
+
+
+  }
+}
+
